@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" 
+    android:background="@drawable/jarvis1" >
+    
+    <ScrollView
+      android:id="@+id/svSettings"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_above="@+id/bPlay"
+      android:layout_gravity="center_horizontal">
+      
+        <RelativeLayout
+            android:layout_width="match_parent"
+    		android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvNumPlates"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sbNumPlates"
+        android:layout_alignParentLeft="true"
+        android:gravity="center" />
+    
+    <SeekBar
+        android:id="@+id/sbNumPlates"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvNumPlates"
+        android:max="29"
+        android:layout_marginTop="25dp"
+        android:progress="10" />
+
+    <TextView
+        android:id="@+id/tvDifficulty"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sbDifficulty"
+        android:layout_alignTop="@+id/sbDifficulty"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tvDifficulty"  />
+        
+     <SeekBar
+        android:id="@+id/sbDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbNumPlates"
+        android:layout_toRightOf="@+id/tvDifficulty"
+        android:layout_marginTop="25dp"
+        android:max="3"
+        android:progress="1" />
+
+    <TextView
+        android:id="@+id/tvResets"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sbResets"
+        android:layout_alignTop="@+id/sbResets"
+        android:gravity="center"
+        android:layout_alignParentLeft="true" />
+    
+    <SeekBar
+        android:id="@+id/sbResets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/sbDifficulty"
+        android:layout_toRightOf="@+id/tvResets"
+        android:layout_marginTop="25dp"
+        android:max="10"
+        android:progress="0" />
+    
+    <TextView
+        android:id="@+id/tvSetupDelay"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sbSetupDelay"
+        android:layout_alignTop="@+id/sbSetupDelay"
+        android:gravity="center"
+        android:layout_alignParentLeft="true" />
+    
+    <SeekBar
+        android:id="@+id/sbSetupDelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/sbResets"
+        android:layout_toRightOf="@+id/tvSetupDelay"
+        android:layout_marginTop="25dp"
+        android:max="9"
+        android:progress="2"/>    
+        
+    <TextView
+        android:id="@+id/tvShotTimerDelay"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sbShotTimerDelay"
+        android:gravity="center"
+        android:layout_alignParentLeft="true" />
+    
+    <SeekBar
+        android:id="@+id/sbShotTimerDelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/sbSetupDelay"
+        android:layout_toRightOf="@+id/tvShotTimerDelay"
+        android:layout_marginTop="25dp"
+        android:max="9"
+        android:progress="2"/>  
+        
+    <TextView
+        android:id="@+id/tvAutoStart"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sbAutoStart"
+        android:gravity="center"
+        android:layout_alignParentLeft="true" />
+    
+    <SeekBar
+        android:id="@+id/sbAutoStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/sbShotTimerDelay"
+        android:layout_toRightOf="@+id/tvShotTimerDelay"
+        android:layout_marginTop="25dp"
+        android:max="10"
+        android:progress="0"/>
+    
+    <CheckBox
+        android:id="@+id/cbHitToStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"        
+        android:text="@string/cbHitToStart" 
+        android:layout_below="@+id/sbAutoStart"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"/>
+     
+	<CheckBox
+        android:id="@+id/cbReady"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"        
+        android:text="@string/cbReady" 
+        android:layout_below="@+id/cbHitToStart"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"/>
+
+	<CheckBox
+        android:id="@+id/cbBuzzers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"        
+        android:text="@string/cbBuzzers" 
+        android:layout_below="@+id/cbReady"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"/>
+	
+	</RelativeLayout>
+    </ScrollView>
+    
+    <Button
+        android:background="@drawable/button1"
+        android:id="@+id/bPlay"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="60sp"   
+        android:textStyle="bold" 
+        android:textColor="@color/blue"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/bPlay"  />
+    
+</RelativeLayout>

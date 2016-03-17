@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Target Controller</string>
+    <string name="action_settings">Settings</string>
+    <string name="timerVal">00:00:000</string>
+    <string name="bReset">Reset</string>
+    <string name="bStart">Start</string>
+    <string name="bStop">Stop</string>
+    <string name="tvDifficulty">Difficulty</string>
+    <string name="tvChooseGame">Select a Game:</string>
+    <string name="bPlay">PLAY</string>
+    <string name="bGameSettings">SETTINGS</string>
+    <string name="bGameInfo">GAME INFO</string>
+    <string name="bClose">CLOSE</string>
+    <string name="popupTitle">Description of Play</string>
+    <string name="hitTimes">HIT TIMES</string>
+    <string name="sessionTimes">SESSION TIMES</string>
+    <string name="hitArrayTitleBar">"   #           TIME          DELTA  "</string>
+    <string name="cbReady">Play RO Sounds</string>
+    <string name="cbBuzzers">Play Buzzers</string>
+    <string name="cbHitToStart">Start Next Round With Hit</string>
+    
+    <string name="GameDescriptionFallingPlates">On buzzer, timer starts and all plates light up. 
+        		After hitting the last plate timer will stop. </string>
+    <string name="GameDescriptionRandomPlates">On buzzer, timer starts and a randomly selected plate lights up. 
+        		After hitting the plate and new randomly selected plate will light up until selected number of 
+        		targets have been hit. </string>
+    <string name="GameDescriptionCountdown">On buzzer, timer starts and a randomly selected plate lights up. 
+        		Plate must be hit within timeout limit or game ends. If plate is hit in time and new randomly 
+        		selected plate will light up until selected number of targets have been hit. Next round will 
+        		have a shorter time out period.</string>
+    <string name="GameDescriptionStayDown">On buzzer, timer starts and all plates light up. 
+        		Plates must be hit a randomly selected amount of times before they will stay off. 
+        		Once all plates are extingushed timer will stop. </string>
+    <string name="GameDescriptionWhackAMole">On buzzer, count down timer starts and a randomly selected plate lights up. 
+        		Plates only stay lit for time out period. Once plate goes out, either hit or timed out, and new randomly 
+        		selected plate will light up until round time is up. Next round will have shorter timeout 
+        		period. If there are no hits in a round game ends.</string>
+    <string name="GameDescriptionFreeStyle">After buzzer, after player hits first plate timer will start. 
+        		Plates light briefly when hit to show contact. Player can hit any plate as many times as they want. 
+        		Round ends when player presses stop.</string>
+
+    <string name="title_activity_falling_plate">Falling Plates</string>
+    <string name="title_activity_random_plate">Random Plate</string>
+    <string name="title_activity_countdown">Countdown</string>
+    <string name="title_activity_stay_down">Stay Down</string>
+    <string name="title_activity_whack_amole">Whack-A-Mole</string>
+    <string name="title_activity_free_style">Free Style</string>
+    <string name="title_activity_hardware_test">Hardware Test</string>
+    <string name="title_activity_game_settings">Game Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="whack_amole_time_score">00:0 HITS:00</string>
+    <string name="whack_amole_lables">ROUND    HITS   MISSES</string>
+
+
+</resources>

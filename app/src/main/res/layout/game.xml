@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" 
+    android:background="@drawable/jarvis1" >
+
+    <TextView
+        android:id="@+id/tvTimerValue"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:text="@string/timerVal"        
+        android:textSize="70sp"         
+        android:textColor="@color/blue"
+        android:layout_marginBottom="10dp"/>
+
+   <LinearLayout
+       android:id="@+id/buttonLayout" 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:weightSum="1.0" 
+    	android:layout_below="@+id/tvTimerValue">
+    
+     <ToggleButton 
+        android:id="@+id/tbTarget1LED" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="0.25"        
+        android:onClick="onTarget1LEDClicked" 
+        android:textOn="Target 1"
+        android:textOff="Target 1"/>
+
+    <ToggleButton
+        android:id="@+id/tbTarget2LED"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:onClick="onTarget2LEDClicked"
+        android:textOn="Target 2"
+        android:textOff="Target 2" />
+
+    <ToggleButton 
+        android:id="@+id/tbTarget3LED" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="0.25"
+        android:onClick="onTarget3LEDClicked"
+        android:textOn="Target 3"
+        android:textOff="Target 3" />
+    
+    <ToggleButton
+        android:id="@+id/tbTarget4LED"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:onClick="onTarget4LEDClicked"
+        android:textOn="Target 4"
+        android:textOff="Target 4" />
+       
+   </LinearLayout> 
+          
+    <TextView
+            android:id="@+id/tvHitArrayTitleBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonLayout"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:text="@string/hitArrayTitleBar" />
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_below="@+id/tvHitArrayTitleBar"
+                android:layout_above="@+id/startButton"
+                android:layout_marginBottom="60dp"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">                    
+
+                    <TextView
+                        android:id="@+id/tvHitArray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/blue"
+                        android:scrollbars="vertical"
+                        android:textSize="30sp" />
+                </LinearLayout>
+            </ScrollView>
+    
+    <SlidingDrawer
+        android:id="@+id/sdSessions"        
+        android:layout_height="wrap_content"        
+        android:allowSingleTap="true"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_above="@+id/startButton"	
+		android:layout_width="fill_parent"
+        android:content="@+id/content2"
+        android:handle="@+id/sdSessionTimeshandle" >
+                
+            <RelativeLayout
+	           android:layout_width="fill_parent"
+	           android:layout_height="wrap_content"
+	           android:id="@+id/sdSessionTimeshandle">
+            
+	            <Button             
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="50dp"
+	    		android:paddingBottom="5dp"
+	   	 		android:paddingTop="5dp"
+	   	 		android:layout_marginRight="10dp"
+	   	 		android:layout_marginLeft="10dp"
+	    		android:text="@string/sessionTimes"
+	    		android:textColor="@color/blue"
+	    		android:textSize="20sp"
+	    		android:background="@drawable/button1" />
+	            
+     		 </RelativeLayout>
+            
+        <LinearLayout
+            android:id="@+id/content2"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+        <TextView
+            android:id="@+id/tvSessionsTitleBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:text="@string/hitArrayTitleBar" />
+
+            <ScrollView
+                android:id="@+id/scrollViewSessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">                    
+
+                    <TextView
+                        android:id="@+id/tvSessionsArray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/blue"
+                        android:scrollbars="vertical"
+                        android:textSize="30sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <Button 
+        android:background="@drawable/button1"
+        android:id="@+id/startButton"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textSize="60sp"   
+        android:textStyle="bold" 
+        android:textColor="@color/blue"
+        android:layout_alignParentBottom="true"
+        android:text="@string/bStart"/>
+    
+</RelativeLayout>

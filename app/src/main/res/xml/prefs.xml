@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    
+    
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="cbDebug"
+        android:summary="Show target LED toggle buttons"
+        android:title="Debug" >
+    </CheckBoxPreference>
+            
+    <ListPreference
+        android:entries="@array/platesense"
+        android:entryValues="@array/platesenseValues"
+        android:key="platesense"
+        android:summary="Sensitivity of the targets"
+        android:title="Target Sensitivity" >
+        </ListPreference>
+       
+</PreferenceScreen>

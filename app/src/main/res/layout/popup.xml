@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/popup_element"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+android:background="@drawable/popup_border"
+>
+
+<TextView
+    android:id="@+id/tvTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:gravity="center"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:text="@string/popupTitle"
+    android:textColor="@color/white"
+    android:textSize="25sp" 
+    android:textStyle="bold"/>
+    
+<TextView
+    android:id="@+id/tvPopup"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_below="@+id/tvTitle"
+    android:textSize="15sp" 
+    android:textColor="@color/white"/>
+
+<Button
+    android:id="@+id/btn_close_popup"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/button1"
+    android:text="@string/bClose"
+    android:textColor="@color/blue" />
+
+</RelativeLayout>
+

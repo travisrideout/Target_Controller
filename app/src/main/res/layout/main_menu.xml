@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/jarvis1"
+    tools:context=".MainMenu">
+
+    <TextView
+        android:id="@+id/tvChooseGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp" 
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/tvChooseGame" />
+    
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="175dp"
+        android:layout_below="@+id/tvChooseGame"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:requiresFadingEdge="horizontal"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="100dp"/>
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp" 
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gallery"
+        android:text="@string/title_activity_falling_plate" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:weightSum="100"
+        android:layout_above="@+id/bPlay"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+        
+        <Button
+        android:background="@drawable/button1"
+        android:id="@+id/bGameInfo"
+        android:layout_weight="50"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textSize="25sp" 
+        android:textColor="@color/blue"      
+        android:layout_marginRight="5dp"         
+        android:text="@string/bGameInfo" />
+
+    <Button
+        android:background="@drawable/button1"
+        android:id="@+id/bGameSettings"
+        android:layout_weight="50"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:textSize="25sp" 
+        android:textColor="@color/blue"
+        android:layout_marginLeft="5dp" 
+        android:text="@string/bGameSettings"/>
+        
+    </LinearLayout>  
+      
+    <Button
+        android:background="@drawable/button1"
+        android:id="@+id/bPlay"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="60sp"   
+        android:textStyle="bold" 
+        android:textColor="@color/blue"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/bPlay"  />
+
+</RelativeLayout>
